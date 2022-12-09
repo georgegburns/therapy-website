@@ -1,0 +1,215 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TimBurnsTherapy</title>
+    <link rel="stylesheet" href="/static/css/style.css?{% now "U" %}"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/script.js?{% now "U"} %}" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+    <section class="landing">
+        <div class="head" id="head">
+        </div>
+        <img class='full' src="{% static 'images/Sunset.jpg' %}" alt='Sunset Over Waves'>
+                    <p class="text-static">Need Help With</p><strong><p class="text-change" id="text-change"></p></strong>
+        <a href='#about'><button class='btn'>Get Help Now</button></a>
+    </section>
+    <main>
+        <a id='about'>
+            <nav class="header">
+                <ul class="header-links">
+                    <li class="header-item"><a href="#about">About</a></li>
+                    <li class="header-item"><a href="#location">Location</a></li>
+                    <li class="header-item"><a href="#therapies">Therapies</a></li>
+                    <li class="header-item"><a href="#price">Price</a></li>
+                    <li class="header-item"><a href="#contact">Contact</a></li>
+                    <li class="header-item"></li>
+                </ul>
+            </nav>
+            <section class="about">
+                <div class="observe1">
+                    <div class="bottom"> 
+                        <h2 class="title">Experienced &amp; Qualified</h2>
+                    </div>
+                    <div class="content">
+                        <div class="col-2">
+                            <img class="first" src="{% static 'images/TimBurns.jpg' %}" alt='Dr Timothy Burns'>
+                            <p class="quote">
+                                "As a psychotherapist and counsellor I believe in working collaboratively with clients in
+                                order for them to reach a deeper personal understanding of themselves... "
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <p class="about">Dr. Tim Burns is an experienced integrative and relational psychotherapist and counsellor.
+                                <br>
+                                <br> 
+                                An accredited member of the <strong>British Association for Counselling and Psychotherapy</strong> and a member of the <strong>The British Psychological Society</strong>.
+                                <br>
+                                <br>
+                                With over <strong>15 years</strong> experience in Primary Care Mental Health Services for the NHS as well as private practice.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </a>
+    <a id="therapies">
+        <section class="therapies">
+            <div class="observe2">
+                <div class="bottom"> 
+                    <h2 class="title">Therapies</h2>
+                </div>
+                <div class="content">
+                    <p class="quote">
+                        "...explore aspects of their past and present issues, 
+                        find acceptance of aspects of their lived experience that cannot 
+                        be changed... "
+                    </p>
+                    <p>Tim incorporates therapeutic approaches and theories drawn from wider psychological and psychotherapeutic traditions, including <strong>Narrative Therapy</strong>, <strong>Mindfulness</strong>, <strong>Interpersonal Psychotherapy</strong> and <strong>Gestalt</strong>.</p>
+                    <br>
+                    <br>
+                    <p class="info" id="info">Hover over each therapy for more information...</p>
+                    <p class="info-sm" id="info">Click on each therapy for more information...</p>
+                    <div class="col-3">
+                        <a class="EMDR" href='#contact' onclick="fillEMDR()"><h3 class="title-lg" onmouseover="revealText1()">EMDR</h3></a>
+                        <a class="EMDR"><h3 class="title-sm" onmouseover="revealText1()">EMDR</h3></a>
+                        <ul class="therapy-list" id="tl1">
+                            <li class="therapy">Relieve distress</li>
+                            <li class="therapy">Change negative beliefs</li>
+                            <li class="therapy">Develop insight into your trauma</li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <a class="Individual" href='#contact'onclick="fillIndividual()"><h3 class="title-lg" onmouseover="revealText2()">Individual</h3></a>
+                        <a class="Individual"><h3 class="title-sm" onmouseover="revealText2()">Individual</h3></a>
+                        <ul class="therapy-list" id="tl2">
+                            <li class="therapy">Reduce stress and anxiety</li>
+                            <li class="therapy">Help with addiction</li>
+                            <li class="therapy">Come to terms with loss</li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <a class="Couples" href='#contact' onclick="fillCouple()"><h3 class="title-lg" onmouseover="revealText3()">Couples</h3></a>
+                        <a class="Couples"><h3 class="title-sm" onmouseover="revealText3()">Couples</h3></a>
+                        <ul class="therapy-list" id="tl3">
+                            <li class="therapy">Conflict resolution</li>
+                            <li class="therapy">Improve communication</li>
+                            <li class="therapy">Build a healthy relationship</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </a>
+    <a id='location'>
+        <section class="location">
+            <div class="observe3">
+                <div class="bottom"> 
+                    <h2 class="title">Location</h2>
+                </div>
+                <div class="content">
+                    <p class="quote">
+                        "...essential to this process is the provision of a safe and confidential environment..."
+                    </p>
+                    <div class="col-2">
+                        <a class="In Person" href='#contact' onclick="fillPerson()"><h3 class="title">In Person</h3></a>
+                        <p class="location-description" id="ld1">Feel safe and comfortable in Tim Burns' private therapy room in Whitstable.</p>
+                        <a class="ext" target="_blank" href="https://www.google.com/maps/place/Whitstable/"><img class="second" id="second" src="{% static 'images/Whitstable.jpg' %}" alt='Whitstable'></a>
+                    </div>
+                    <div class="col-2">
+                        <a class="Online" href='#contact' onclick="fillOnline()"><h3 class="title">Online</h3></a>
+                        <p class="location-description" id="ld2">Enjoy the comfort and convenience of online therapy using Zoom.</p>
+                        <a class="ext" target="_blank" href="https://zoom.us/"><img class="third" id="third" src="{% static 'images/Zoom.jpg' %}" alt='Zoom Meeting'></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </a>
+    <a id='price'>
+        <section class="price">
+            <div class="observe4">
+                <div class="bottom"> 
+                    <h2 class="title">Adjustable Pricing</h2>
+                </div>
+                <div class="content">
+                    <p class="quote">
+                        "...with the goal to make meaningful changes to improve their
+                        sense of psychological well-being."
+                    </p>
+                    <p class="text">We understand that therapy shouldn't be a luxury. 
+                        <br>
+                        <br>
+                        If your circumstances mean you can't afford, <strong>please don't hesitate to reach out.</strong> 
+                        <br>
+                        <br>
+                        We will help where we can.</p>
+                    <table class="prices">
+                        <thead>                    
+                            <th></th>
+                            <th>Online</th>
+                            <th>In Person</th>
+                        </thead>
+                        <tbody>
+                        {% for price in prices %}
+                            <tr class="body">
+                                <td>{{price.Therapy}}</td>
+                                <td>£{{price.Online}}</td>
+                                <td>£{{price.In_Person}}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </section>
+    </a>
+        <section class="contact">
+            <div class="observe5">
+                <a id='contact'>
+                <div class="bottom"> 
+                    <h2 class="title">Get In Touch</h2>
+                </div>
+                    <div class='form-container'>
+                        <form id="messageform" class="form" autocomplete="off" method="POST" action="" enctype="multipart/form-data">
+                        {% csrf_token %}
+                            {{ messageform.Name }}
+                            {{ messageform.Email }}
+                            {{ messageform.Therapy }}
+                            {{ messageform.Type }}
+                            {{ messageform.Message }}
+                            <input class="submit" type="submit" value="Send">
+                        </form>
+                    </div>
+                {% if messages %}
+                {% for message in messages %}
+                    {% if message.tags == 'success' %}
+                    <p class="success fadeinTopdelayedmore">{{ message }}
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    </p>
+                    </div>
+                    {% endif %}
+                    {% if message.tags == 'error'%}
+                    <p class="alert fadeinTopdelayedmore">{{ message }}
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    </p>
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="footer">
+        <ul class="footer-links">
+            <li class="footer-item"><a href="#about">About</a></li>
+            <li class="footer-item"><a href="#location">Location</a></li>
+            <li class="footer-item"><a href="#therapies">Therapies</a></li>
+            <li class="footer-item"><a href="#price">Price</a></li>
+            <li class="footer-item"><a href="#contact">Contact</a></li>
+            <li class="footer-item">TimBurnsTherapy &#xa9;</li>
+        </ul>
+    </footer>
+</body>
+</html>

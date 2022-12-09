@@ -1,0 +1,142 @@
+html,body {
+    padding: 0;
+    margin: 0;
+}
+
+.absolute-bg {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:0;
+    background-color:#000000;
+}
+
+.title {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 10;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title h1{
+    color:#ffffff;
+    text-transform: uppercase;
+    font-size: 5rem;
+    letter-spacing: 1;
+}
+
+.title h1:hover{
+    text-shadow: 0 0 5px #f8ffd2;
+}
+
+
+.title a{
+    text-decoration: none;
+    color: #ececec;
+}
+
+.fog {
+   position: relative;
+   height:100vh;
+   width: 100%;
+   background: #fff; 
+}
+
+.fog-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.fog-img {
+   position:absolute;
+   height: 100vh;
+   width: 300vw;
+   z-index: 2; 
+}
+
+.fog-img-first{
+    background: url("/static/images/fog-1.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: fog 60s linear infinite
+}
+
+.fog-img-second{
+    background: url("/static/images/fog-2.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: fog 30s linear infinite
+}
+
+@keyframes fog {
+    0% {
+        transform: translate3d(0,0,0);
+    }
+    100% {
+        transform: translate3d(-200vw, 0, 0);
+    }
+}
+
+@-webkit-keyframes fadein {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
+@-moz-keyframes fadein {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
+@-o-keyframes fadein {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
+@keyframes fadein {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
+
+@-webkit-keyframes fadeout {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+  }
+@-moz-keyframes fadeout {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+  }
+@-o-keyframes fadeout {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+  }
+@keyframes fadeout {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+  }
+
+  @-webkit-keyframes grow {
+    0%{font-size: 2rem;}
+    100%{font-size: 8rem;}
+  }
+@-moz-keyframes grow {
+    0%{font-size: 2rem;}
+    100%{font-size: 8rem;}
+  }
+@-o-keyframes grow {
+    0%{font-size: 2rem;}
+    100%{font-size: 8rem;}
+  }
+@keyframes grow {
+    0%{font-size: 2rem;}
+    100%{font-size: 8rem;}
+  }

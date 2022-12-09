@@ -98,11 +98,11 @@ const observer5 = new IntersectionObserver(entries => {
             document.querySelectorAll(".header")[0].classList.remove("fadeout");
             document.querySelectorAll(".header")[0].classList.add("fadeinTop");
             document.querySelectorAll(".bottom")[4].classList.add("fadeinTop");
-            document.querySelectorAll(".form-control")[0].classList.add("fadeinLeftfast");
-            document.querySelectorAll(".form-control")[1].classList.add("fadeinRightfast");
-            document.querySelectorAll(".form-control")[2].classList.add("fadeinLeftfast");
-            document.querySelectorAll(".form-control")[3].classList.add("fadeinRightfast");
-            document.querySelectorAll(".form-control")[4].classList.add("fadeinLeftfast");
+            document.querySelectorAll(".name-form")[0].classList.add("fadeinLeftfast");
+            document.querySelectorAll(".email-form")[0].classList.add("fadeinRightfast");
+            document.querySelectorAll(".therapy-form")[0].classList.add("fadeinLeftfast");
+            document.querySelectorAll(".location-form")[0].classList.add("fadeinRightfast");
+            document.querySelectorAll(".message-form")[0].classList.add("fadeinLeftfast");
             document.querySelectorAll(".submit")[0].classList.add("fadeinRightfast");
             document.querySelectorAll(".footer")[0].classList.add("fadeinBottomfast");
             var height = $('.landing').height();

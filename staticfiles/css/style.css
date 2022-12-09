@@ -10,10 +10,6 @@ html, body {
     margin: 0;
   }
 
-  main{
-    overflow: hidden;
-  }
-
 span {
     display: inline-block;
 }
@@ -44,6 +40,7 @@ nav {
 nav.header {
     padding: 20px 0 20px 0;
     width: 100%;
+    margin: 0;
 }
 
 nav a:hover {
@@ -238,7 +235,6 @@ h3:hover{
 }
 
 div {
-    max-width: 100%;
     width: 100%;
     display: inline-block;
     position: relative;

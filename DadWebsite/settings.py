@@ -136,6 +136,7 @@ SERVER_EMAIL = env("SERVER_EMAIL")
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT= BASE_DIR / "media"
@@ -163,7 +164,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'mysite.log',
+            'filename': 'C:\\Users\\George.Burns\\Documents\\Projects\\logs\\Therapy.log',
             'formatter': 'verbose'
         },
     },

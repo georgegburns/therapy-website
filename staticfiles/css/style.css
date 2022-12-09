@@ -172,7 +172,7 @@ td {
 }
 
 th, td{
-    padding: 10% 10%;
+    padding: 5% 2%;
     border-bottom: 1px solid #ddd;
 }
 
@@ -211,7 +211,7 @@ h2.title {
     font-family: 'Edwardian Script';
     font-style:italic;
     text-align: center;
-    font-size: 47px;
+    font-size: 45px;
     margin: 0;
     padding: 50px 0;
 }

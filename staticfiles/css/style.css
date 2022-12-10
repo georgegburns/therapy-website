@@ -147,7 +147,7 @@ option {
 
 textarea {
     display:block;
-    font-family: 'Edwardian Script';
+    font-family: 'Playfair Display';
     height: auto;
     width: 70%;
     margin: 0 auto;
@@ -208,7 +208,7 @@ button.btn:hover{
 
 h2.title {
     color: #0e0d0d;
-    font-family: 'Edwardian Script';
+    font-family: 'Playfair Display';
     font-style:italic;
     text-align: center;
     font-size: 45px;
@@ -218,7 +218,7 @@ h2.title {
 
 h3{
     color: #0e0d0d;
-    font-family: 'Edwardian Script';
+    font-family: 'Playfair Display';
     text-align: center;
     font-size: 35px;
     margin: 0;
@@ -341,7 +341,7 @@ p.text-static{
     z-index: 1;
     text-align: center;
     color:#ececec;
-    font-family:'American Typewriter';
+    font-family:'Playful Display';
     font-size: 24px;
     opacity: 0;
     position: absolute;
@@ -360,7 +360,7 @@ p.text-change{
     z-index: 1;
     opacity: 0;
     color:#ececec;
-    font-family:'American Typewriter';
+    font-family:'Playful Display';
     font-size: 24px;
     position: absolute;
     top: 35%;
@@ -386,13 +386,13 @@ a {
     text-decoration: none;
     font-size: 1rem;
     text-align: center;
-    font-family: 'Edwardian Script';
+    font-family: 'Playfair Display';
     color:#0e0d0d;
 }
 
 a.btn{
     color:#ececec;
-    font-family:'American Typewriter';
+    font-family:'Playfair Display';
     font-size: 35px;
 }
 
@@ -412,6 +412,7 @@ img {
 
 img.full {
     height:100vh;
+    width: 100vw;
     object-fit: cover;
 }
 
@@ -435,7 +436,7 @@ img.third{
     padding: 2% 0;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 769px) and (min-height: 415px) {
 
     html, body{
         min-width: 550px;
@@ -470,7 +471,7 @@ img.third{
         text-decoration: none;
         font-size: 2rem;
         text-align: center;
-        font-family: 'Edwardian Script';
+        font-family: 'Playfair Display';
         color:#0e0d0d;
     }
 

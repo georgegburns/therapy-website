@@ -1,6 +1,10 @@
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
+if (vh < 400){
+    document.getElementById("ts").style['top'] = '20%';
+}
+
 if (vw > 769){
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {

@@ -1,10 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>TimBurnsTherapy</title>
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <link rel="stylesheet" href="/static/css/style.css?{% now "U" %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="/static/js/script.js?{% now "U"} %}" defer></script>
     <meta charset="UTF-8">
@@ -13,7 +14,7 @@
 <body>
     <section class="landing">
         <img class='full' src="{% static 'images/Sunset.jpg' %}" alt='Sunset Over Waves'>
-                    <p class="text-static">Need Help With</p>
+                    <p class="text-static" id="ts">Need Help With</p>
                     <p class="text-change" id="text-change"></p>
         <button class='btn'><a class="btn" href='#about'>Get Help Now</a></button>
     </section>

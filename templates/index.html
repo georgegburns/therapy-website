@@ -4,7 +4,7 @@
 <head>
     <title>TimBurnsTherapy</title>
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
-    <link rel="stylesheet" href="/static/css/style.css?{% now "U" %}"/>
+    <link rel="stylesheet" href="/static/css/style.css?{% now "U" %}">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="/static/js/script.js?{% now "U"} %}" defer></script>
     <meta charset="UTF-8">
@@ -12,14 +12,12 @@
 </head>
 <body>
     <section class="landing">
-        <div class="head" id="head">
-        </div>
         <img class='full' src="{% static 'images/Sunset.jpg' %}" alt='Sunset Over Waves'>
-                    <p class="text-static">Need Help With</p><strong><p class="text-change" id="text-change"></p></strong>
-        <a href='#about'><button class='btn'>Get Help Now</button></a>
+                    <p class="text-static">Need Help With</p>
+                    <p class="text-change" id="text-change"></p>
+        <button class='btn'><a class="btn" href='#about'>Get Help Now</a></button>
     </section>
-    <main>
-        <a id='about'>
+        <main>
             <nav class="header">
                 <ul class="header-links">
                     <li class="header-item"><a href="#about">About</a></li>
@@ -27,38 +25,35 @@
                     <li class="header-item"><a href="#therapies">Therapies</a></li>
                     <li class="header-item"><a href="#price">Price</a></li>
                     <li class="header-item"><a href="#contact">Contact</a></li>
-                    <li class="header-item"></li>
                 </ul>
             </nav>
-            <section class="about">
-                <div class="observe1">
-                    <div class="bottom"> 
-                        <h2 class="title">Experienced &amp; Qualified</h2>
+        <section class="about" id="about">
+            <div class="observe1">
+                <div class="bottom"> 
+                    <h2 class="title">Experienced &amp; Qualified</h2>
+                </div>
+                <div class="content">
+                    <div class="col-2">
+                        <p class="quote">
+                            "As a psychotherapist and counsellor I believe in working collaboratively with clients in
+                            order for them to reach a deeper personal understanding of themselves... "
+                        </p>
+                        <img class="first" src="{% static 'images/TimBurns.jpg' %}" alt='Dr Timothy Burns'>
                     </div>
-                    <div class="content">
-                        <div class="col-2">
-                            <img class="first" src="{% static 'images/TimBurns.jpg' %}" alt='Dr Timothy Burns'>
-                            <p class="quote">
-                                "As a psychotherapist and counsellor I believe in working collaboratively with clients in
-                                order for them to reach a deeper personal understanding of themselves... "
-                            </p>
-                        </div>
-                        <div class="col-2">
-                            <p class="about">Dr. Tim Burns is an experienced integrative and relational psychotherapist and counsellor.
-                                <br>
-                                <br> 
-                                An accredited member of the <strong>British Association for Counselling and Psychotherapy</strong> and a member of the <strong>The British Psychological Society</strong>.
-                                <br>
-                                <br>
-                                With over <strong>15 years</strong> experience in Primary Care Mental Health Services for the NHS as well as private practice.
-                            </p>
-                        </div>
+                    <div class="col-2">
+                        <p class="about">Dr. Tim Burns is an experienced integrative and relational psychotherapist and counsellor.
+                            <br>
+                            <br> 
+                            An accredited member of the <strong>British Association for Counselling and Psychotherapy</strong> and a member of the <strong>The British Psychological Society</strong>.
+                            <br>
+                            <br>
+                            With over <strong>15 years</strong> experience in Primary Care Mental Health Services for the NHS as well as private practice.
+                        </p>
                     </div>
                 </div>
-            </section>
-        </a>
-    <a id="therapies">
-        <section class="therapies">
+            </div>
+        </section>
+        <section class="therapies" id="therapies">
             <div class="observe2">
                 <div class="bottom"> 
                     <h2 class="title">Therapies</h2>
@@ -104,9 +99,7 @@
                 </div>
             </div>
         </section>
-    </a>
-    <a id='location'>
-        <section class="location">
+        <section class="location" id="location">
             <div class="observe3">
                 <div class="bottom"> 
                     <h2 class="title">Location</h2>
@@ -128,51 +121,47 @@
                 </div>
             </div>
         </section>
-    </a>
-    <a id='price'>
-        <section class="price">
+        <section class="price" id="price">
             <div class="observe4">
                 <div class="bottom"> 
                     <h2 class="title">Adjustable Pricing</h2>
                 </div>
-                <div class="content">
-                    <p class="quote">
-                        "...with the goal to make meaningful changes to improve their
-                        sense of psychological well-being."
-                    </p>
-                    <p class="text">We understand that therapy shouldn't be a luxury. 
-                        <br>
-                        <br>
-                        If your circumstances mean you can't afford, <strong>please don't hesitate to reach out.</strong> 
-                        <br>
-                        <br>
-                        We will help where we can.</p>
-                    <table class="prices">
-                        <thead>                    
-                            <th></th>
-                            <th>Online</th>
-                            <th>In Person</th>
-                        </thead>
-                        <tbody>
-                        {% for price in prices %}
-                            <tr class="body">
-                                <td>{{price.Therapy}}</td>
-                                <td>£{{price.Online}}</td>
-                                <td>£{{price.In_Person}}</td>
-                            </tr>
-                        {% endfor %}
-                    </table>
+                    <div class="content">
+                        <p class="quote">
+                            "...with the goal to make meaningful changes to improve their
+                            sense of psychological well-being."
+                        </p>
+                        <p class="text">We understand that therapy shouldn't be a luxury. 
+                            <br>
+                            <br>
+                            If your circumstances mean you can't afford, <strong>please don't hesitate to reach out.</strong> 
+                            <br>
+                            <br>
+                            We will help where we can.</p>
+                        <table class="prices">
+                            <thead>                    
+                                <th></th>
+                                <th>Online</th>
+                                <th>In Person</th>
+                            </thead>
+                            <tbody>
+                            {% for price in prices %}
+                                <tr class="body">
+                                    <td>{{price.Therapy}}</td>
+                                    <td>£{{price.Online}}</td>
+                                    <td>£{{price.In_Person}}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </a>
-        <section class="contact">
-            <div class="observe5">
-                <a id='contact'>
-                <div class="bottom"> 
-                    <h2 class="title">Get In Touch</h2>
-                </div>
-                    <div class='form-container'>
+            </section>
+            <section class="contact" id="contact">
+                <div class="observe5">
+                    <div class="bottom"> 
+                        <h2 class="title">Get In Touch</h2>
+                    </div>
+                    <div class="content">
                         <form id="messageform" class="form" autocomplete="off" method="POST" action="" enctype="multipart/form-data">
                         {% csrf_token %}
                             {{ messageform.Name }}
@@ -182,24 +171,24 @@
                             {{ messageform.Message }}
                             <input class="submit" type="submit" value="Send">
                         </form>
-                {% if messages %}
-                {% for message in messages %}
-                    {% if message.tags == 'success' %}
-                    <p class="success fadeinTopdelayedmore">{{ message }}
-                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                    </p>
+                    </div>
+                    {% if messages %}
+                    {% for message in messages %}
+                        {% if message.tags == 'success' %}
+                        <p class="success fadeinTopdelayedmore">{{ message }}
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        </p>
+                        {% endif %}
+                        {% if message.tags == 'error'%}
+                        <p class="alert fadeinTopdelayedmore">{{ message }}
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        </p>
+                        {% endif %}
+                    {% endfor %}
                     {% endif %}
-                    {% if message.tags == 'error'%}
-                    <p class="alert fadeinTopdelayedmore">{{ message }}
-                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                    </p>
-                    {% endif %}
-                {% endfor %}
-                {% endif %}
-                </a>
-            </div>
-        </section>
-    </main>
+                </div>
+            </section>
+        </main>
     <footer class="footer" id="footer">
         <ul class="footer-links">
             <li class="footer-item"><a href="#about">About</a></li>

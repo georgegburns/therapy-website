@@ -182,14 +182,12 @@
                             {{ messageform.Message }}
                             <input class="submit" type="submit" value="Send">
                         </form>
-                    </div>
                 {% if messages %}
                 {% for message in messages %}
                     {% if message.tags == 'success' %}
                     <p class="success fadeinTopdelayedmore">{{ message }}
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     </p>
-                    </div>
                     {% endif %}
                     {% if message.tags == 'error'%}
                     <p class="alert fadeinTopdelayedmore">{{ message }}

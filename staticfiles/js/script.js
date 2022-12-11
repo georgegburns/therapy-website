@@ -37,7 +37,7 @@ if (vw > 769){
     const observer2 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting){
-                document.querySelectorAll(".header")[0].classList.remove("hidden");
+                document.querySelectorAll(".header")[0].classList.remove("fadeout");
                 document.querySelectorAll(".header")[0].classList.add("fadeinTop");
                 document.querySelectorAll(".bottom")[1].classList.add("fadeinTop");
                 document.querySelectorAll(".content")[1].classList.add("fadeinTopdelayed");
@@ -168,7 +168,7 @@ else {
     const observer2 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting){
-                document.querySelectorAll(".header")[0].classList.remove("hidden");
+                document.querySelectorAll(".header")[0].classList.remove("fadeout");
                 document.querySelectorAll(".header")[0].classList.add("fadeinTop");
                 document.querySelectorAll(".bottom")[1].classList.add("fadeinTop");
                 document.querySelectorAll(".content")[1].classList.add("fadeinTopdelayed");

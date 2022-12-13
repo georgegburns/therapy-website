@@ -5,15 +5,25 @@
     <title>TimBurnsTherapy</title>
     <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
     <link rel="stylesheet" href="/static/css/style.css?{% now "U" %}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Playfair+Display">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="/static/js/script.js?{% now "U"} %}" defer></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=1.0, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Integrative and relational psychotherapist and counsellor offering EMDR, individual and couples therapy to treat depression, relationship conflict, anxiety and trauma.">
 </head>
 <body>
     <section class="landing">
-        <img class='full' src="{% static 'images/Sunset.jpg' %}" alt='Sunset Over Waves'>
+        <picture>
+            <source media="(max-width:240px)" srcset="{% static 'images/Sunset240.jpg' %}">
+            <source media="(max-width:360px)" srcset="{% static 'images/Sunset360.jpg' %}">
+            <source media="(max-width:480px)" srcset="{% static 'images/Sunset480.jpg' %}">
+            <source media="(max-width:720px)" srcset="{% static 'images/Sunset720.jpg' %}">
+            <source media="(max-width:1080px)" srcset="{% static 'images/Sunset1080.jpg' %}">
+            <source media="(max-width:1440px)" srcset="{% static 'images/Sunset1440.jpg' %}">
+            <source media="(max-width:3840px)" srcset="{% static 'images/Sunset3840.jpg' %}">
+            <img class='full' src="{% static 'images/Sunset.jpg' %}" alt='Sunset Over Waves'>
+        </picture>
                     <p class="text-static" id="ts">Need Help With</p>
                     <p class="text-change" id="text-change"></p>
         <button class='btn'><a class="btn" href='#about'>Get Help Now</a></button>
@@ -39,7 +49,12 @@
                             "As a psychotherapist and counsellor I believe in working collaboratively with clients in
                             order for them to reach a deeper personal understanding of themselves... "
                         </p>
-                        <img class="first" src="{% static 'images/TimBurns.jpg' %}" alt='Dr Timothy Burns'>
+                        <picture>
+                            <source media="(max-width:240px)" srcset="{% static 'images/TimBurns240.jpg' %}">
+                            <source media="(max-width:360px)" srcset="{% static 'images/TimBurns360.jpg' %}">
+                            <source media="(max-width:480px)" srcset="{% static 'images/TimBurns480.jpg' %}">
+                            <img class="first" src="{% static 'images/TimBurns.jpg' %}" alt='Dr Timothy Burns'>
+                        </picture>
                     </div>
                     <div class="col-2">
                         <p class="about">Dr. Tim Burns is an experienced integrative and relational psychotherapist and counsellor.
@@ -112,12 +127,28 @@
                     <div class="col-2">
                         <a class="In Person" href='#contact' onclick="fillPerson()"><h3 class="title">In Person</h3></a>
                         <p class="location-description" id="ld1">Feel safe and comfortable in a private therapy room in Whitstable.</p>
-                        <a class="ext" target="_blank" href="https://www.google.com/maps/place/Whitstable/"><img class="second" id="second" src="{% static 'images/Whitstable.jpg' %}" alt='Whitstable'></a>
+                        <picture>
+                            <a class="ext" target="_blank" href="https://www.google.com/maps/place/Whitstable/">
+                                <source media="(max-width:240px)" srcset="{% static 'images/Whitstable240.jpg' %}">
+                                <source media="(max-width:360px)" srcset="{% static 'images/Whitstable360.jpg' %}">
+                                <source media="(max-width:480px)" srcset="{% static 'images/Whitstable480.jpg' %}">
+                                <source media="(max-width:720px)" srcset="{% static 'images/Whitstable720.jpg' %}">
+                                <img class="second" id="second" src="{% static 'images/Whitstable.jpg' %}" alt='Whitstable'>
+                            </a>
+                        </picture>
                     </div>
                     <div class="col-2">
                         <a class="Online" href='#contact' onclick="fillOnline()"><h3 class="title">Online</h3></a>
                         <p class="location-description" id="ld2">Enjoy the comfort and convenience of online therapy using Zoom.</p>
-                        <a class="ext" target="_blank" href="https://zoom.us/"><img class="third" id="third" src="{% static 'images/Zoom.jpg' %}" alt='Zoom Meeting'></a>
+                        <picture>
+                            <a class="ext" target="_blank" href="https://zoom.us/">
+                                <source media="(max-width:240px)" srcset="{% static 'images/Zoom240.jpg' %}">
+                                <source media="(max-width:360px)" srcset="{% static 'images/Zoom360.jpg' %}">
+                                <source media="(max-width:480px)" srcset="{% static 'images/Zoom480.jpg' %}">
+                                <source media="(max-width:720px)" srcset="{% static 'images/Zoom720.jpg' %}">
+                                <img class="third" id="third" src="{% static 'images/Zoom.jpg' %}" alt='Zoom Meeting'>
+                            </a>
+                        </picture>
                     </div>
                 </div>
             </div>

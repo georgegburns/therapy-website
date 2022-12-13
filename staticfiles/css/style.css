@@ -300,6 +300,7 @@ p.success {
 
 p {
     font-size: 24px;
+    font-size-adjust: initial;
     color: #0e0d0d;
     max-width: 90%;
     margin: 0 auto;
@@ -345,7 +346,7 @@ p.text-static{
     font-size: 24px;
     opacity: 0;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left:13%;
     right:13%;
     padding: 12px 24px;

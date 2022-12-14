@@ -9,6 +9,7 @@ if (vw > 769){
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting){
+                document.querySelectorAll(".header")[0].classList.remove("fadeout");
                 document.querySelectorAll(".full")[0].classList.add("fadeinTopdelayed");
                 document.querySelectorAll(".text-static")[0].classList.add("fadeinTopdelayedmore");
                 document.querySelectorAll(".text-change")[0].classList.add("fadeinTopdelayedmore");
@@ -22,6 +23,7 @@ if (vw > 769){
     const observer1 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting){
+                document.querySelectorAll(".header")[0].classList.remove("fadeout");
                 document.querySelectorAll(".header")[0].classList.add("fadeinTop");
                 document.querySelectorAll(".bottom")[0].classList.add("fadeinTop");
                 document.querySelectorAll(".content")[0].classList.add("fadeinTopdelayed");
@@ -140,6 +142,7 @@ else {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting){
+                document.querySelectorAll(".header")[0].classList.remove("fadeout");
                 document.querySelectorAll(".full")[0].classList.add("fadeinTopdelayed");
                 document.querySelectorAll(".text-static")[0].classList.add("fadeinTopdelayedmore");
                 document.querySelectorAll(".text-change")[0].classList.add("fadeinTopdelayedmore");
@@ -153,6 +156,7 @@ else {
     const observer1 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting){
+                document.querySelectorAll(".header")[0].classList.remove("fadeout");
                 document.querySelectorAll(".header")[0].classList.add("fadeinTop");
                 document.querySelectorAll(".bottom")[0].classList.add("fadeinTop");
                 document.querySelectorAll(".content")[0].classList.add("fadeinTopdelayed");
@@ -310,6 +314,12 @@ function fillCouple(){
 
 function fillIndividual(){
     document.getElementById("therapy").value='Individual';
+}
+
+function removeHead(){
+    var height = $('.landing').height();
+    $(document).scrollTop($(document).scrollTop() - height);
+    $('.landing').remove();
 }
 
 

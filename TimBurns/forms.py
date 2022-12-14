@@ -12,18 +12,18 @@ class PriceForm(forms.Form):
 class MessageForm(forms.Form):
     Name = forms.CharField(max_length=25, 
                            help_text='25 characters max.', 
-                           widget= forms.TextInput(attrs={'Placeholder': 'Name', 'Class' : 'name-form', 'label' : 'Enter Name:'}))
+                           widget= forms.TextInput(attrs={'Placeholder': 'Name', 'Class' : 'name-form', 'name' : 'name:'}))
     Email = forms.EmailField(help_text='A valid email address, please.',
-                             widget=forms.EmailInput(attrs={'Placeholder': 'Email', 'Class' : 'email-form', 'label' : 'Enter Email:'}))
+                             widget=forms.EmailInput(attrs={'Placeholder': 'Email', 'Class' : 'email-form', 'name' : 'email:'}))
     Therapy = forms.ChoiceField(initial='Therapy',
-                                widget= forms.Select(attrs={'Id':'therapy', 'Class' : 'therapy-form', 'label' : 'Select Therapy (Leave Unselected If Unsure):'}),
+                                widget= forms.Select(attrs={'Id':'therapy', 'Class' : 'therapy-form', 'name' : 'therapy'}),
                                 choices=THERAPY_CHOICES)
     Type = forms.ChoiceField(initial='Location',
-                           widget= forms.Select(attrs={'Id':'types', 'Class' : 'location-form', 'label' : 'Select Location (Leave Unselected If Unsure):'}),
+                           widget= forms.Select(attrs={'Id':'types', 'Class' : 'location-form', 'name' : 'location'}),
                            choices=LOCATION_CHOICES)
     Message = forms.CharField(max_length=1000, 
                               required=False,
-                              widget= forms.Textarea(attrs={'Class' : 'message-form', 'label' : 'Message:'}))
+                              widget= forms.Textarea(attrs={'Class' : 'message-form', 'name' : 'message'}))
     class Meta:
         fields = ['Name', 'Email', 'Therapy', 'Type', 'Message']
         

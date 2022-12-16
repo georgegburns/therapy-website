@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import Http404
 from django.contrib import messages
 from django.core.mail import send_mail
 from . import forms
 from . import models
 
+
+def view_404(request, exception=None):
+    return redirect('index')
 
 def index(request):
     if request.method == 'POST':
